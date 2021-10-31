@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<!--엘리먼트 선언-->
+<!ELEMENT EarthQuakes (EarthQuake+, EarthQuake_Information+)>
+<!ELEMENT EarthQuake (EarthQuake_Force, EarthQuake_location, EarthQuake_location_X, EarthQuake_location_Y, EarthQuake_time)>
+<!ELEMENT EarthQuake_Force (#PCDATA)>
+<!ELEMENT EarthQuake_location (#PCDATA)>
+<!ELEMENT EarthQuake_location_X (#PCDATA)>
+<!ELEMENT EarthQuake_location_Y (#PCDATA)>
+<!ELEMENT EarthQuake_time (#PCDATA)>
+<!ELEMENT EarthQuake_Information (Force+, Content+)>
+<!ELEMENT Force (#PCDATA)>
+<!ELEMENT Content (#PCDATA)>
+
+
+
+
+<!--속성 선언-->
+<!ATTLIST EarthQuake idx ID #REQUIRED>
+<!ATTLIST EarthQuake_location_X unit CDATA "위도">
+<!ATTLIST EarthQuake_location_Y unit CDATA "경도">
+<!ATTLIST EarthQuake_time unit CDATA "분">
+<!ATTLIST EarthQuake_Information idx ID #REQUIRED>
